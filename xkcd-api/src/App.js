@@ -9,9 +9,11 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <Title/>
-      <ComicDisplay/>
-      <NavButtons/>
+      <div className="content">
+        <Title />
+        <ComicDisplay />
+        <NavButtons />
+      </div>
     </div>
   );
 }

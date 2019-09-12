@@ -7,7 +7,7 @@ const Title = (props) => {
 
     return (
         <div className='comic-title'>
-            <h1>{props.propsTitle}</h1>
+            <h1>"{props.propsTitle}"</h1>
             <h2>#{props.propsNum}</h2>
         </div>
     );
