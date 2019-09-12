@@ -25,7 +25,9 @@ export const reducer = (state = initialState, action) => {
         return {
           ...state,
           isFetching: false,
-          quote: action.payload
+          number: action.payload.num,
+          title: action.payload.title,
+          comicSRC: action.payload.img
         };
       default:
         return state;
