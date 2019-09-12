@@ -3,6 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import {useEffect} from 'react';
 import Axios from 'axios';
+import Title from './components/Title';
+import ComicDisplay from './components/ComicDisplay';
+import NavButtons from './components/NavButtons';
+
 
 function App() {
 
