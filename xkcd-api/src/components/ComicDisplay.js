@@ -6,7 +6,7 @@ const ComicDisplay = (props) =>{
 
     return (
         <div className = 'comic-container'>
-            <img className  = 'comic-image' src = ''/>
+            <img className  = 'comic-image' src = {`${props.propsImg}`}/>
         </div>
     );
 }

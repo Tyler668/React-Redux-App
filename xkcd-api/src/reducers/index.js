@@ -7,7 +7,7 @@ import {
 export const initialState = {
     number: 1,
     title: 'Barrel - Part 1',
-    comicSRC: '"https://imgs.xkcd.com/comics/barrel_cropped_(1).jpg"',
+    comicSRC: 'https://imgs.xkcd.com/comics/barrel_cropped_(1).jpg',
     isFetching: false,
     error: ''
 };
@@ -15,8 +15,20 @@ export const initialState = {
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
-
-
-        default: return state;
+      case FETCHING_COMIC_START:
+        return {
+          ...state,
+          isFetching: true,
+          error: ""
+        };
+      case FETCHING_COMIC_SUCCESS:
+        return {
+          ...state,
+          isFetching: false,
+          quote: action.payload
+        };
+      default:
+        return state;
     }
-}
+  };
+  

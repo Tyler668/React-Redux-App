@@ -6,6 +6,7 @@ import Axios from 'axios';
 import Title from './components/Title';
 import ComicDisplay from './components/ComicDisplay';
 import NavButtons from './components/NavButtons';
+import './App.scss';
 
 
 function App() {
