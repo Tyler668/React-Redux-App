@@ -1,9 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const Title = () =>{
 
 
-    return
+    return(
+        <div className = 'comic-title'>
+            <h1>Title</h1>
+        </div>
+    );
 }
-
-export default Title;
+const mapStateToProps = state =>{
+    return{
+      propsImg: state.comicSRC 
+    }
+  }
+  
+  export default connect(mapStateToProps, {})(Title);
+  

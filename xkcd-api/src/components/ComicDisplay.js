@@ -1,9 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const ComicDisplay = () =>{
+const ComicDisplay = (props) =>{
 
 
-    return
+    return (
+        <div className = 'comic-container'>
+            <img className  = 'comic-image' src = ''/>
+        </div>
+    );
 }
 
-export default ComicDisplay;
+const mapStateToProps = state =>{
+    return{
+      propsImg: state.comicSRC 
+    }
+  }
+  
+  export default connect(mapStateToProps, {})(ComicDisplay);
+  

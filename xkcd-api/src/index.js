@@ -17,7 +17,7 @@ const comicState = createStore(
 
 ReactDOM.render
     (
-        <Provider>
+        <Provider store = {comicState}>
             <App />
         </Provider>
         , document.getElementById('root'));

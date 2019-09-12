@@ -11,7 +11,7 @@ import NavButtons from './components/NavButtons';
 function App() {
 
   useEffect(() => {
-    Axios.get(`https://cors-anywhere.herokuapp.com/https://xkcd.com/614/info.0.json`)
+    Axios.get(`https://cors-anywhere.herokuapp.com/https://xkcd.com/1/info.0.json`)
     .then(res =>{
        console.log(res.data)
     })
@@ -20,36 +20,12 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title/>
+      <ComicDisplay/>
+      <NavButtons/>
     </div>
   );
 }
 
 export default App;
 
-
-
-// let url = '';
-// fetch(url)
-//     .then(response => {
-//         if (!response.ok) {
-//             throw new Error('Something broke');
-//         }
-//         return response.json();
-        
-//     })
-//     .then(data => console.log(data))
-//     .catch(err => console.log(err));
