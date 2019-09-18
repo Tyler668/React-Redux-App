@@ -10,7 +10,7 @@ const NavButtons = (props) => {
     }
 
     const backIterator = () =>{
-        if(props.propsNum === 1){return 'today'}
+        if(props.propsNum === 1){return '/'}
         else{return props.propsNum - 1}
     }
 
