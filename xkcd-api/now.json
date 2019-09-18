@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "react-redux-app",
+    "name": "xkcd-api",
     "builds": [{ "src": "project-name/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
     "routes": [
         { "src": "/(.*)", "dest": "project-name/$1" }
