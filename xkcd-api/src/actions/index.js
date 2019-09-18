@@ -7,17 +7,6 @@ export const getComicAC = (index) => dispatch => {
 
 
     dispatch({ type: FETCHING_COMIC_START });
-
-    if (index === 'today') {
-        Axios.get(`https://cors-anywhere.herokuapp.com/https://xkcd.com/info.0.json`)
-            .then(res => {
-                dispatch({ type: FETCHING_COMIC_SUCCESS, payload: res.data });
-            })
-            .catch(err => {
-                dispatch({ type: FETCHING_COMIC_FAILURE, payload: err });
-            });
-    }
-    else {
         Axios
             .get(`https://cors-anywhere.herokuapp.com/https://xkcd.com/${index}/info.0.json`)
             .then(res => {
@@ -26,6 +15,6 @@ export const getComicAC = (index) => dispatch => {
             .catch(err => {
                 dispatch({ type: FETCHING_COMIC_FAILURE, payload: err });
             });
-    }
+    // }
 
 };

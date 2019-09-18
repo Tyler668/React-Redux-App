@@ -19,7 +19,7 @@ const NavButtons = (props) => {
         <div className='nav-buttons'>
             <button onClick={() => props.getComicAC(backIterator())}>Back</button>
             <button onClick={() => props.getComicAC(Math.floor(Math.random() * 2202))}>Random</button>
-            <button onClick={() => props.getComicAC('today')}>Today</button>
+            <button onClick={() => props.getComicAC('/')}>Today</button>
             <button onClick={() => props.getComicAC(nextIterator())}>Next</button>
         </div>
     );
