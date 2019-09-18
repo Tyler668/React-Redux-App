@@ -1,8 +1,8 @@
 {
     "version": 2,
     "name": "xkcd-api",
-    "builds": [{ "src": "project-name/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
+    "builds": [{ "src": "xkcd-api/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
     "routes": [
-        { "src": "/(.*)", "dest": "project-name/$1" }
+        { "src": "/(.*)", "dest": "xkcd-api/$1" }
     ]
 }
