@@ -1,17 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getComicAC } from '../actions';
+import axios from 'axios';
 
 const NavButtons = (props) => {
 
-    const nextIterator = () =>{
-        if(props.propsNum === 2201){return 1}
-        else{return props.propsNum + 1}
+    const [currentComic, setCurrentComic] = useState('')
+
+    axios.get(`https://cors-anywhere.herokuapp.com/https://xkcd.com/info.0.json`)
+        .then(res => {
+            const currentIndex = res.data.num;
+            setCurrentComic(currentIndex);
+        })
+
+
+
+
+
+    const nextIterator = () => {
+        if (props.propsNum === currentComic) { return 1 }
+        else { return props.propsNum + 1 }
     }
 
-    const backIterator = () =>{
-        if(props.propsNum === 1){return '/'}
-        else{return props.propsNum - 1}
+    const backIterator = () => {
+        if (props.propsNum === 1) { return '/' }
+        else { return props.propsNum - 1 }
     }
 
 
