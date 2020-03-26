@@ -1,7 +1,7 @@
 import {
     FETCHING_COMIC_START,
     FETCHING_COMIC_SUCCESS,
-    FETCHING_COMIC_FAILURE
+    // FETCHING_COMIC_FAILURE
 } from '../actions';
 
 export const initialState = {

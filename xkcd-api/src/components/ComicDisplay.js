@@ -15,6 +15,9 @@ const mapStateToProps = state =>{
     return{
       propsImg: state.comicSRC 
     }
+
+    
+    
   }
   
   export default connect(mapStateToProps, {})(ComicDisplay);
